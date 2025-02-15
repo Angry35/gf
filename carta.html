@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Yareli 💌</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            background: url('tumblr.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .letter-container {
+            position: relative;
+            width: 1050px; /* Aumentado el ancho de la carta */
+            cursor: pointer;
+        }
+        .letter {
+            width: 100%;
+            transition: transform 0.6s;
+        }
+        .open .letter {
+            transform: rotateX(180deg);
+        }
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1rem;
+            width: 500px; /* Aumentado el ancho del mensaje dentro de la carta */
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.6s;
+			line-height: 1.5; /* Añadido interlineado para mejor legibilidad */
+        }
+        .open .message {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="letter-container" onclick="toggleLetter()">
+        <img src="carta-cerrada.png" alt="💌" class="letter">
+        <div class="message">Querida Yareli,
+		Volver a coincidir contigo fue un giro inesperado, casi surrealista. Desde nuestra primera conversación después de tanto tiempo, supe que algo especial volvía a nacer. Tus palabras, tu voz, hicieron que el tiempo se desvaneciera.
+
+Con el paso de los días, descubrí en ti un hogar, alguien con quien quiero compartirlo todo. No pude contener mis sentimientos, y no me arrepiento. Has estado a mi lado en cada instante, en cada emoción, y eso me hace inmensamente feliz.
+
+Hoy solo quiero decirte cuánto te amo. Eres mi cielo escarchado, mi energía, mi paz. Gracias por todo lo que me has brindado, por ser mi refugio y mi aventura.
+		eres lo mejor que me ha pasado... 💖
+		</div>
+    </div>
+    <script>
+        function toggleLetter() {
+            document.querySelector('.letter-container').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

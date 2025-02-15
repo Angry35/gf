@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de Recuerdos 💖</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: url('fond.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            max-width: 90%;
+            margin: auto;
+        }
+        .photo {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+        }
+        .photo img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .photo:hover {
+            transform: scale(1.05);
+        }
+        .caption {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.4rem;
+            background: #ff516b;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #e63950;
+            transform: scale(1.1);
+        }
+        .music-player {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>El amor de mi vida 💕</h1>
+	
+	    <div class="music-player">
+		
+        <audio id="audio" controls>
+            <source id="audioSource" src="musica1.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <br>
+        <button onclick="prevSong()">⏮ </button>
+        <button onclick="nextSong()">⏭ </button>
+    </div>
+    <div class="gallery">
+	
+        <div class="photo">
+            <img src="foto1.jpg" alt="Foto 1">
+            <div class="caption">Oh, luz que disipas las sombras,  
+tus labios esbozan el alba en mi día.</div>
+        </div>
+        <div class="photo">
+            <img src="foto2.jpg" alt="Foto 2">
+            <div class="caption">Refugio eres, fortaleza sagrada,  
+donde reposa mi espíritu errante.</div>
+        </div>
+        <div class="photo">
+            <img src="foto3.jpg" alt="Foto 3">
+            <div class="caption">Alzo el vuelo en sueños dorados,  
+pues tus manos sostienen mi cielo.</div>
+        </div>
+		<div class="photo">
+            <img src="foto4.jpg" alt="Foto 4">
+            <div class="caption">Contigo, mi aliento se enciende,  
+y en cada latido, renazco de nuevo.</div>
+        </div>
+		<div class="photo">
+            <img src="foto5.jpg" alt="Foto 5">
+            <div class="caption">Eres mi todo, mi norte, mi faro,  
+mi paz y mi dulce refugio.</div>
+        </div>
+		<div class="photo">
+            <img src="foto6.jpg" alt="Foto 6">
+            <div class="caption">Bajo el arrullo de tu voz, descanso,  
+hallando en su brisa mi calma.</div>
+        </div>
+		<div class="photo">
+            <img src="foto7.jpg" alt="Foto 7">
+            <div class="caption">Compañera y estrella en mi noche,  
+hablas mi alma en lenguas calladas.</div>
+        </div>
+		<div class="photo">
+            <img src="foto8.jpg" alt="Foto 8">
+            <div class="caption">En mi duelo, risa tuya es aurora,  
+bálsamo dulce en la herida del tiempo.</div>
+        </div>
+		<div class="photo">
+            <img src="foto9.jpg" alt="Foto 9">
+            <div class="caption">Junto a ti, la vida se ensancha,  
+y en tu amor, hallo mi centro.</div>
+        </div>
+		<div class="photo">
+            <img src="foto10.jpg" alt="Foto 10">
+            <div class="caption">Ángel mío, luz en mi sombra,  
+eterna guardiana de mi destino.</div>
+        </div>
+		<div class="photo">
+            <img src="foto11.jpg" alt="Foto 11">
+            <div class="caption">Eres el alba de mi jornada,  
+motivo y fuerza de cada intento.</div>
+        </div>
+		<div class="photo">
+            <img src="foto12.jpg" alt="Foto 12">
+            <div class="caption">Eres el alba de mi jornada,  
+motivo y fuerza de cada intento.</div>
+        </div>
+		<div class="photo">
+            <img src="foto13.jpg" alt="Foto 13">
+            <div class="caption">Tu amor es lienzo, pincel y obra,  
+maestra de todo lo bello en mi ser.</div>
+        </div>
+		<div class="photo">
+            <img src="foto14.jpg" alt="Foto 14">
+            <div class="caption">Eres mi escudo, mi fe, mi estandarte,  
+y en tu amor hallo mi gloria.</div>
+        </div>
+		<div class="photo">
+            <img src="foto15.jpg" alt="Foto 15">
+            <div class="caption">Eres el premio de mi destino,  
+el oro hallado en mi senda errante.</div>
+        </div>
+		<div class="photo">
+            <img src="foto16.jpg" alt="Foto 16">
+            <div class="caption">A tu lado, soy afortunado,  
+pues tu amor es mi mayor fortuna.</div>
+        </div>
+		<div class="photo">
+            <img src="foto17.jpg" alt="Foto 17">
+            <div class="caption">Tu sonrisa es la estrella fugaz,  
+brillo divino que colma mi suerte.</div>
+        </div>
+		<div class="photo">
+            <img src="foto18.jpg" alt="Foto 18">
+            <div class="caption">En tu abrazo, el mundo se aquieta,  
+y la tormenta se torna en calma</div>
+        </div>
+		<div class="photo">
+            <img src="foto19.jpg" alt="Foto 19">
+            <div class="caption">A tu lado, mi ser resplandece,  
+pues en tu amor hallo mi esencia.</div>
+        </div>
+		<div class="photo">
+            <img src="foto20.jpg" alt="Foto 20">
+            <div class="caption">Bendecido soy por tu presencia,  
+ángel que vela mis sueños callados.
+</div>
+        </div>
+		<div class="photo">
+            <img src="foto21.jpg" alt="Foto 21">
+            <div class="caption">Me haces sentir agradecido,  
+pues cada día contigo es un milagro.</div>
+        </div>
+		<div class="photo">
+            <img src="foto22.jpg" alt="Foto 22">
+            <div class="caption">Eres la bendición de mi vida,  
+un ángel entre mortales.</div>
+        </div>
+		<div class="photo">
+            <img src="foto23.jpg" alt="Foto 23">
+            <div class="caption"></div>
+        </div>
+		<div class="photo">
+            <img src="foto24.jpg" alt="Foto 24">
+            <div class="caption"></div>
+        </div>
+		<div class="photo">
+            <img src="foto25.jpg" alt="Foto 25">
+            <div class="caption"></div>
+        </div>
+		<div class="photo">
+            <img src="foto26.jpg" alt="Foto 26">
+            <div class="caption"></div>
+        </div>
+				<div class="photo">
+            <img src="foto27.jpg" alt="Foto 27">
+            <div class="caption"></div>
+        </div>
+		<div class="photo">
+            <img src="foto28.jpg" alt="Foto 28">
+            <div class="caption"></div>
+        </div>
+		<div class="photo">
+            <img src="foto29.jpg" alt="Foto 29">
+            <div class="caption"></div>
+        </div>
+		<div class="photo">
+            <img src="foto30.jpg" alt="Foto 30">
+            <div class="caption"></div>
+        </div>
+		<div class="photo">
+            <img src="foto31.jpg" alt="Foto 31">
+            <div class="caption"></div>
+        </div>
+    </div>
+
+    <button class="back-button" onclick="goToAlbum()">💌</button>
+    <script>
+        let playlist = ["musica1.mp3", "musica2.mp3", "musica3.mp3", "musica4.mp3","musica5.mp3","musica6.mp3"];
+        let currentSong = 0;
+        let audioElement = document.getElementById("audio");
+        let audioSource = document.getElementById("audioSource");
+
+        function changeSong(index) {
+            if (index >= 0 && index < playlist.length) {
+                currentSong = index;
+                audioSource.src = playlist[currentSong];
+                audioElement.load();
+                audioElement.play();
+            }
+        }
+        function nextSong() {
+            currentSong = (currentSong + 1) % playlist.length;
+            changeSong(currentSong);
+        }
+        function prevSong() {
+            currentSong = (currentSong - 1 + playlist.length) % playlist.length;
+            changeSong(currentSong);
+        }
+        function goBack() {
+            window.location.href = "carta.html";
+        }
+        audioElement.addEventListener("ended", function() {
+            nextSong();
+        });
+    </script>
+
+    
+    <script>
+        function goToAlbum() {
+            window.location.href = "carta.html";
+        }
+    </script>
+</body>
+</html>
